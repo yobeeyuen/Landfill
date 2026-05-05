@@ -19,12 +19,11 @@
 
     // Your Custom Georeferenced Image Tiles
     // Use the GitHub URL if you are testing online, or './tiles/...' for local
-    L.tileLayer('https://yobeeyuen.github.io/Landfill/tiles/{z}/{x}/{y}.png', {
-        minZoom: 0,
-        maxZoom: 20,
-        tms: false,
-        opacity: 0.8
-    }).addTo(map);
-</script>
+    L.tileLayer('./tiles/{z}/{x}/{y}.png', {
+            tms: false, // Often required for GDAL generated tiles
+            opacity: 0.8,
+            attribution: 'My Custom Geodata'
+        }).addTo(map);
+    </script>
 </body>
 </html>
